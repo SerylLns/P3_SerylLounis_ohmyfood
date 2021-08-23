@@ -207,6 +207,8 @@ footer p {
 }
 .card__restaurant .card__restaurant_content i:hover::before {
   cursor: pointer;
+  font-weight: bold;
+  color: violet;
 }
 .card__restaurant h5 {
   margin: 10px;
@@ -218,6 +220,7 @@ footer p {
 }
 
 .restaurant__dish {
+  animation: enter 0.6s ease-in;
   display: flex;
   width: 85%;
   position: relative;
@@ -237,9 +240,9 @@ footer p {
   width: 20%;
 }
 .restaurant__dish:hover .dish__checked i {
-  font-size: 1.6em;
+  font-size: 1.8em;
   transition: font-size 0s 0.2s;
-  animation: 1s rotate;
+  animation: 0.6s rotate 0.1s;
 }
 .restaurant__dish .dish__checked {
   position: absolute;
@@ -298,6 +301,17 @@ footer p {
     transform: rotateZ(360deg);
   }
 }
+@keyframes enter {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    margin-top: 0px;
+    opacity: 1;
+  }
+}
 header i {
   margin-left: 15px;
   font-size: 1.2em;
@@ -327,8 +341,15 @@ header i {
   font-size: 1.2em;
 }
 .restaurant__menu .restaurant__title i {
-  font-size: 1.8em;
+  font-size: 1.5em;
   font-weight: 100;
+}
+.restaurant__menu .restaurant__title i:hover {
+  font-weight: bold;
+  color: violet;
+}
+.restaurant__menu .restaurant__title h2 {
+  font-size: 1.3em;
 }
 .restaurant__menu h3 {
   position: relative;

@@ -64,6 +64,8 @@
       font-size: 1.5em;
       &:hover::before{
         cursor: pointer;
+        font-weight: bold;
+        color: violet; 
       }
     }
   }
@@ -80,6 +82,7 @@
 // Dishes cards
 
 .restaurant__dish{
+  animation: enter 0.6s ease-in;
   display: flex;
   width: 85%;
   position: relative;
@@ -99,9 +102,9 @@
       width: 20%;
       i{
         // display: block;
-        font-size: 1.6em;
+        font-size: 1.8em;
         transition: font-size 0s 0.2s;
-        animation: 1s rotate;
+        animation: 0.6s rotate 0.1s;
       }
     }
   }
@@ -165,5 +168,17 @@
   }
   to{
     transform: rotateZ(360deg);
+  }
+}
+
+@keyframes enter{
+  from{
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to{
+    transform: translateY(0px);
+    margin-top: 0px;
+    opacity: 1;
   }
 }
