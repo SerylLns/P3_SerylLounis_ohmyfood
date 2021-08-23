@@ -228,22 +228,24 @@ footer p {
   border-radius: 16px;
 }
 .restaurant__dish:hover .restaurant__dish_menu {
-  width: 70%;
-  transition: width 0.5s ease-in;
+  width: 80%;
+  transition: width 0.6s ease-in;
 }
 .restaurant__dish:hover .dish__checked {
   display: flex;
-  transition: 0.4s ease-in;
+  transition: 0.6s ease-in;
   width: 20%;
 }
 .restaurant__dish:hover .dish__checked i {
-  font-size: 2em;
-  transition: font-size 0.4s ease-in;
+  font-size: 1.6em;
+  transition: font-size 0s 0.2s;
+  animation: 1s rotate;
 }
 .restaurant__dish .dish__checked {
   position: absolute;
   right: 0;
-  width: 0px;
+  width: 0%;
+  transition: width 0.4s;
   height: 100%;
   border-top-right-radius: 16px;
   border-bottom-right-radius: 16px;
@@ -252,15 +254,16 @@ footer p {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 0.5s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 .restaurant__dish .dish__checked i {
   font-size: 0em;
+  transition: font-size 0.4s;
   color: white;
 }
 .restaurant__dish .restaurant__dish_menu {
   position: relative;
-  width: 80%;
+  width: 95%;
 }
 .restaurant__dish h5 {
   margin: 5px 0px;
@@ -269,6 +272,7 @@ footer p {
   text-size-adjust: initial;
 }
 .restaurant__dish p {
+  text-overflow: ellipsis;
   display: flex;
   justify-content: space-between;
   margin: 0;
@@ -281,6 +285,14 @@ footer p {
   color: rgba(0, 0, 0, 0.7);
 }
 
+@keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
 header i {
   margin-left: 15px;
   font-size: 1.2em;

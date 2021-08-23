@@ -90,23 +90,26 @@
   border-radius: 16px;
   &:hover{
     .restaurant__dish_menu{
-      width: 70%;
-      transition: width 0.5s ease-in;
+      width: 80%;
+      transition: width 0.6s ease-in;
     }
     .dish__checked{
       display: flex;
-      transition:  0.4s ease-in;
+      transition:  0.6s ease-in;
       width: 20%;
       i{
-        font-size: 2em;
-        transition: font-size 0.4s ease-in;
+        // display: block;
+        font-size: 1.6em;
+        transition: font-size 0s 0.2s;
+        animation: 1s rotate;
       }
     }
   }
   .dish__checked{
     position: absolute;
     right: 0;
-    width: 0px;
+    width: 0%;
+    transition: width 0.4s;
     height: 100%;
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px;
@@ -117,16 +120,18 @@
     justify-content: center;
     align-items: center;
     i{
+      // display: none;
       font-size: 0em;
+      transition: font-size 0.4s;
       color: white;
     }
-    
-    transition: 0.5s ease-in-out;
+
+    transition: 0.4s ease-in-out;
     // display: none;
   }
   .restaurant__dish_menu{
     position: relative;
-    width: 80%;
+    width: 95%;
   }
   h5{
     margin: 5px 0px;
@@ -135,6 +140,7 @@
     text-size-adjust: initial;
   }
   p{
+    text-overflow: ellipsis;
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -146,5 +152,14 @@
     right: 20px;
     font-weight: 600;
     color: rgba($color: black, $alpha: .7);
+  }
+}
+
+@keyframes rotate{
+  from{
+    transform: rotateZ(0);
+  }
+  to{
+    transform: rotateZ(360deg);
   }
 }
