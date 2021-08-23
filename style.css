@@ -272,15 +272,20 @@ footer p {
   text-size-adjust: initial;
 }
 .restaurant__dish p {
-  text-overflow: ellipsis;
   display: flex;
   justify-content: space-between;
+  text-overflow: ellipsis;
+  width: 85%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: "...";
+  display: inline-block;
   margin: 0;
+  font-size: 0.9em;
 }
 .restaurant__dish .dish__price {
-  float: right;
-  bottom: 15px;
-  right: 20px;
+  width: 12%;
+  font-size: 1em;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.7);
 }

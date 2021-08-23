@@ -140,16 +140,20 @@
     text-size-adjust: initial;
   }
   p{
-    text-overflow: ellipsis;
     display: flex;
     justify-content: space-between;
+    text-overflow: ellipsis;
+    width: 85%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: "...";
+    display: inline-block;
     margin: 0;
+    font-size: 0.9em;
   }
   .dish__price{
-    // position: absolute;
-    float: right;
-    bottom: 15px;
-    right: 20px;
+    width: 12%;
+    font-size: 1em;
     font-weight: 600;
     color: rgba($color: black, $alpha: .7);
   }
