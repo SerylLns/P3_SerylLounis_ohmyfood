@@ -1,10 +1,25 @@
-@import 'homepage.scss';
-@import "components/button.scss";
-@import "components/card.scss";
-body{
+$azure: #99e2d0;
+$violet: #9356dc;
+$pink: #ff79da;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 header {
   width: 100vw;
@@ -13,34 +28,38 @@ header {
   justify-content: center;
   align-items: center;
   box-shadow: 0px 1px 5px gray;
-  img{
+  img {
     width: 50%;
     margin: auto auto;
   }
 }
-footer{
-  background-color: rgba($color: #000000, $alpha: .82);
+footer {
+  background-color: rgba($color: #000000, $alpha: 0.82);
   color: white;
   padding: 20px;
-  div{
+  div {
     display: flex;
     align-items: center;
     margin-top: 10px;
-    p{
+    p {
       margin: 0;
     }
   }
-  img{
+  img {
     padding-top: 10px;
-   width: 30%;
-   margin-bottom: 10px;
-  } 
+    width: 30%;
+    margin-bottom: 10px;
+  }
   i {
     margin-right: 7px;
     font-size: 0.7em;
   }
-  p{
+  p {
     // margin-top: 10px;
     margin: 10px 0px 0px 0px;
   }
 }
+@import "homepage.scss";
+@import "components/button.scss";
+@import "components/card.scss";
+@import "menu.scss";

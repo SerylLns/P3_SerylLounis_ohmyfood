@@ -47,6 +47,7 @@
   background-color: white;
   border-radius: 20px;
   margin-bottom: 20px;
+  box-shadow: 1px 1px 10px rgba($color: gray, $alpha: .5);
   img{
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -74,4 +75,75 @@
     margin: 10px;
     font-weight: 100;
   } 
+}
+
+// Dishes cards
+
+.restaurant__dish{
+  display: flex;
+  width: 85%;
+  position: relative;
+  background-color: white;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0px 0px 10px rgba($color: black, $alpha: .1);
+  border-radius: 16px;
+  &:hover{
+    .restaurant__dish_menu{
+      width: 70%;
+      transition: width 0.5s ease-in;
+    }
+    .dish__checked{
+      display: flex;
+      transition:  0.4s ease-in;
+      width: 20%;
+      i{
+        font-size: 2em;
+        transition: font-size 0.4s ease-in;
+      }
+    }
+  }
+  .dish__checked{
+    position: absolute;
+    right: 0;
+    width: 0px;
+    height: 100%;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    // padding: 15px;
+    background-color: #99e2d0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i{
+      font-size: 0em;
+      color: white;
+    }
+    transition: 0.5s ease-in-out;
+    // display: none;
+  }
+  .restaurant__dish_menu{
+    position: relative;
+    width: 80%;
+  }
+  h5{
+    margin: 5px 0px;
+    font-size: 1em;
+    font-weight: 600;
+    text-size-adjust: initial;
+  }
+  p{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+  }
+  .dish__price{
+    // position: absolute;
+    float: right;
+    bottom: 15px;
+    right: 20px;
+    font-weight: 600;
+    color: rgba($color: black, $alpha: .7);
+  }
 }

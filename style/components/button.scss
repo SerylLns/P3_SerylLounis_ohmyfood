@@ -3,10 +3,18 @@
   padding: 15px 25px;
   border-radius: 50px;
   border: none;
-  background: #5A2EAB;
-  background: -webkit-linear-gradient(bottom right, #5A2EAB, #E29198);
-  background: -moz-linear-gradient(bottom right, #5A2EAB, #E29198);
-  background: linear-gradient(to top left, #5A2EAB, #E29198);
+  background: $violet;
+  background: -webkit-linear-gradient(bottom right, $violet, $pink);
+  background: -moz-linear-gradient(bottom right, $violet, $pink);
+  background: linear-gradient(to top left, $violet, $pink);
   color: white;
   font-weight: 500;
+}
+
+.btn_large{
+  padding: 20px 50px;
+  font-size: 1em;
+  font-weight: 400;
+  margin: 50px 25%;
+
 }
