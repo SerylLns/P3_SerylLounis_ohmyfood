@@ -130,6 +130,12 @@ footer p {
   color: white;
   font-weight: 500;
 }
+.btn-primary:hover {
+  cursor: pointer;
+  opacity: 0.95;
+  box-shadow: 0px 0px 4px black;
+  transition: all 0.4s;
+}
 
 .btn_large {
   padding: 20px 50px;
@@ -208,7 +214,17 @@ footer p {
 .card__restaurant .card__restaurant_content i:hover::before {
   cursor: pointer;
   font-weight: bold;
-  color: violet;
+  animation: filling-heart 3s ease-in-out both;
+}
+@keyframes filling-heart {
+  0% {
+    color: violet;
+    transform: rotateY(60deg);
+  }
+  100% {
+    color: blueviolet;
+    transform: rotateY(0deg);
+  }
 }
 .card__restaurant h5 {
   margin: 10px;

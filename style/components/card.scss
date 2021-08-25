@@ -65,10 +65,23 @@
       &:hover::before{
         cursor: pointer;
         font-weight: bold;
-        color: violet; 
+        // color: violet;
+        animation: filling-heart 3s ease-in-out both;
       }
     }
   }
+  @keyframes filling-heart {    
+
+    0% {        
+      color: violet;      
+        transform:  rotateY(60deg);  
+      }       
+    100% {
+      color: blueviolet;
+      transform:  rotateY(0deg);  
+
+    }
+}
   h5{
     margin: 10px;
     font-size: 1em;
@@ -91,7 +104,6 @@
   display: flex;
   width: 85%;
   position: relative;
-  // background-color: white;
   padding: 10px;
   margin-bottom: 15px;
   box-shadow: 0px 0px 10px rgba($color: black, $alpha: .1);
