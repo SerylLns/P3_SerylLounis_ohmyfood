@@ -60,7 +60,7 @@ footer p {
 
 #spinner {
   position: fixed;
-  animation: loading 5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation: loading 5s linear;
   top: 0px;
   right: 0px;
   bottom: 0px;
@@ -407,17 +407,26 @@ footer p {
 }
 .card__restaurant .card__restaurant_content i:hover::before {
   cursor: pointer;
+  animation: filling-heart 0.6s ease-in-out;
   font-weight: bold;
-  animation: filling-heart 3s ease-in-out both;
+  opacity: 1;
+  color: blueviolet;
+  text-shadow: 0px 0px 4px #9356dc;
 }
 @keyframes filling-heart {
   0% {
     color: violet;
-    transform: rotateY(60deg);
+    font-weight: bold;
+    opacity: 0;
+    transform: scale(0.1);
+    text-shadow: 0px 0px 4px #9356dc;
   }
-  100% {
+  to {
+    font-weight: bold;
+    opacity: 1;
     color: blueviolet;
-    transform: rotateY(0deg);
+    transform: scale(0.9);
+    text-shadow: 0px 0px 10px #9356dc;
   }
 }
 .card__restaurant h5 {
@@ -576,9 +585,13 @@ header i {
   font-size: 1.5em;
   font-weight: 100;
 }
-.restaurant__menu .restaurant__title i:hover {
+.restaurant__menu .restaurant__title i:hover::before {
+  cursor: pointer;
+  animation: filling-heart 0.6s ease-in-out;
   font-weight: bold;
-  color: violet;
+  opacity: 1;
+  color: blueviolet;
+  text-shadow: 0px 0px 4px #9356dc;
 }
 .restaurant__menu .restaurant__title h2 {
   font-size: 1.3em;

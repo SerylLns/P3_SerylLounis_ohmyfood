@@ -2,13 +2,14 @@
 
 #spinner{
   position: fixed;
-  animation: loading 5s cubic-bezier(0.215, 0.610, 0.355, 1);
+  animation: loading 5s linear;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
   background-color: rgba($color: black, $alpha: .8);
   display: flex;
+  
   justify-content: center;
   align-items: center;
   opacity: 0;

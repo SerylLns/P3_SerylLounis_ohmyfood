@@ -27,9 +27,15 @@ header i {
     i{
       font-size: 1.5em;
       font-weight: 100;
-      &:hover{
+      &:hover::before {
+        cursor: pointer;
+        // font-weight: bold;
+        // color: violet;
+        animation: filling-heart .6s ease-in-out;
         font-weight: bold;
-        color: violet;
+        opacity: 1;
+        color: blueviolet;
+        text-shadow: 0px 0px 4px $violet;
       }
     }
     h2{
