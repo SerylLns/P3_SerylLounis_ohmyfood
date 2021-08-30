@@ -58,3 +58,53 @@ header i {
     margin-bottom: 40px;
   }
 }
+
+@media screen and (min-width: 600px) {
+  .restaurant__menu .restaurant__title{
+    h2{
+      font-size: 2.1em;
+    }
+    i{
+      font-size: 2em;
+    }
+  }
+  .hero__img{
+    height: 350px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .restaurant__dish{
+    height: 110px;
+    align-items: center;
+    .dish__price{
+      font-size: 1.4em;
+    }
+    &:hover{
+      .dish__checked{
+        width: 13%;
+        i{
+          font-size: 2.4em;
+        }
+      }
+    }
+  }
+  .restaurant__menu{
+    width: 90%;
+    border-top-left-radius: 0px;
+    padding-left: 20px;
+    h3{
+       font-size: 1.6em;
+     }
+  }
+  .restaurant__dish_menu{
+    width: 92%;
+    margin-left: 40px;
+    h5{
+      font-size: 1.5em;
+    }
+    p{
+      font-size: 1.1em;
+    }
+  }
+
+}

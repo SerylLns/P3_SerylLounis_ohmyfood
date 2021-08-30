@@ -63,3 +63,16 @@ footer {
 @import "components/button.scss";
 @import "components/card.scss";
 @import "menu.scss";
+
+@media screen and (min-width: 600px) {
+  footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.2em;
+    padding: 40px;
+    img{
+      width: 30%;
+    } 
+  }
+}

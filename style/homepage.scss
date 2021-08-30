@@ -1,64 +1,132 @@
 @import "./components/spinner.scss";
-.localisation{
+.localisation {
   height: 8vh;
-  background-color: rgba(gray, $alpha: .2);
+  background-color: rgba(gray, $alpha: 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: 600;
-  i{
+  i {
     margin-right: 20px;
     font-size: 1em;
   }
 }
 
-.explore__section_1{
-  background-color: rgba(gray, $alpha: .1);
+.explore__section_1 {
+  background-color: rgba(gray, $alpha: 0.1);
   padding: 50px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  h1{
+  h1 {
     font-size: 1.6em;
     width: 80%;
     text-align: center;
     margin: 0;
   }
-  p{
+  p {
     font-size: 1.1em;
     width: 90%;
     text-align: center;
     margin: 10px 0;
-    color: rgba($color: #000000, $alpha: .7);
+    color: rgba($color: #000000, $alpha: 0.7);
   }
 }
 
-.homepage__fonctionnement{
+.homepage__fonctionnement {
   margin-top: 30px;
   padding-bottom: 10px;
-  h3{
+  h3 {
     margin-left: 20px;
     font-size: 1.4em;
   }
-  .cards{
+  .cards {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
 
-.cards__restaurants{
- background-color: rgba(gray, $alpha: .1);
- padding: 30px 0px;
- margin-top: 30px;
-//  margin-bottom: 30px;
- display: flex;
- flex-direction: column;
- align-items: center;  
- h3{
-  align-self: flex-start;
-  margin-left: 20px;
-  font-size: 1.4em;
- }
+.cards__restaurants {
+  background-color: rgba(gray, $alpha: 0.1);
+  padding: 30px 0px;
+  margin-top: 30px;
+  //  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    align-self: flex-start;
+    margin-left: 20px;
+    font-size: 1.4em;
+  }
+}
+.cards__index_restaurants {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+@media screen and (min-width: 600px) {
+  header {
+    padding: 15px 0px;
+    img {
+      width: 22%;
+    }
+  }
+  .explore__section_1 {
+    padding: 40px 10%;
+    width: 80%;
+    margin: auto;
+    border-radius: 12px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    h1 {
+      font-size: 2em;
+    }
+    p {
+      font-size: 1.5em;
+    }
+  }
+  .homepage__fonctionnement {
+    h3 {
+      position: relative;
+      font-size: 2em;
+      margin: 5px 0px 25px 50px;
+    }
+  }
+  .cards {
+    width: 70%;
+    margin: auto;
+  }
+  .cards__restaurants {
+    h3 {
+      position: relative;
+      font-size: 2em;
+      margin: 5px 0px 25px 50px;
+      &::after {
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 100%;
+        background-color: $azure;
+        bottom: 0;
+        left: 15%;
+      }
+    }
+  }
+  .cards__index_restaurants {
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 25px;
+    .card__restaurant {
+      width: 350px;
+      .new_restaurant {
+        top: 10px;
+      }
+    }
+  }
+}
