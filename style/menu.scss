@@ -14,7 +14,7 @@ header i {
   display: inline-block;
   width: 100%;
   padding-top: 20px;
-  padding-bottom: 80px;
+  padding-bottom: 20px;
   margin-top: -40px;
   .restaurant__title{
     display: flex;
@@ -38,7 +38,7 @@ header i {
   }
   h3{
     position: relative;
-    font-weight: 100;
+    font-weight: 300;
     text-transform: uppercase;
     margin-left: 20px;
     &::after{

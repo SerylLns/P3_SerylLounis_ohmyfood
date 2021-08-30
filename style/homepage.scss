@@ -1,45 +1,4 @@
-#loading{
-  position: fixed;
-  z-index: 30;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: gray;
-  opacity: .8;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#loading h3{
-  font-size: 3em;
-  color: white;
-  animation: loading infinite;
-  opacity: 1;
-  text-shadow: 15px 20px 1px black;
-  // z-index: 40;
-}
-#spinner{
-  font-size: 5em;
-  color: purple;
-  animation: spinner 1s alternate infinite;
-}
-@keyframes spinner {
-  
-  to{
-    transform: rotate(360deg);
-  }
-}
-@keyframes loading {
-  from{
-    transform: scale(1.6) rotateZ(40deg);
-  }
-  to{
-    transform: scale(1) rotateZ(-40deg);
-  }
-}
-
+@import "./components/spinner.scss";
 .localisation{
   height: 8vh;
   background-color: rgba(gray, $alpha: .2);
