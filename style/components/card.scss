@@ -30,12 +30,12 @@
   }
 }
 .new_restaurant{
-  background-color: lightgreen;
+  background-color: $azure;
   color: green;
   width: 80px;
   text-align: center;
   padding: 10px;
-  font-weight: 600;
+  font-weight: 500 !important;
   position: absolute;
   right: 10px;
   border-radius: 4px;
@@ -60,7 +60,7 @@
     i{
       position: absolute;
       top: 10px;
-      right: 10px;
+      right: 20px;
       font-size: 1.5em;
       &:hover::before{
         cursor: pointer;
@@ -84,11 +84,13 @@
 }
   h5{
     margin: 10px;
-    font-size: 1em;
+    font-size: 1.1em;
+    margin-bottom: 5px;
   }
   p{
-    margin: 10px;
-    font-weight: 100;
+    margin: 0px 10px 10px;
+    font-weight: 400;
+    font-size: 1.1em;
   } 
 }
 // Dishes cards
@@ -109,6 +111,11 @@
   box-shadow: 0px 0px 10px rgba($color: black, $alpha: .1);
   border-radius: 16px;
   &:hover{
+    .dish__price{
+      right: 0px;
+      transition: all 0.6s ease-in;
+
+    }
     .restaurant__dish_menu{
       width: 80%;
       transition: width 0.6s ease-in;
@@ -118,7 +125,6 @@
       transition:  0.6s ease-in;
       width: 20%;
       i{
-        // display: block;
         font-size: 1.8em;
         transition: font-size 0s 0.2s;
         animation: 0.6s rotate 0.1s;
@@ -172,10 +178,14 @@
     font-size: 0.9em;
   }
   .dish__price{
+    position: absolute;
     width: 12%;
+    bottom: 0px;
+    right: -15px;
     font-size: 1em;
     font-weight: 600;
     color: rgba($color: black, $alpha: .7);
+    
   }
 }
 

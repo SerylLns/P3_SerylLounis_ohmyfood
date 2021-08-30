@@ -1,3 +1,45 @@
+#loading{
+  position: fixed;
+  z-index: 30;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: gray;
+  opacity: .8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#loading h3{
+  font-size: 3em;
+  color: white;
+  animation: loading infinite;
+  opacity: 1;
+  text-shadow: 15px 20px 1px black;
+  // z-index: 40;
+}
+#spinner{
+  font-size: 5em;
+  color: purple;
+  animation: spinner 1s alternate infinite;
+}
+@keyframes spinner {
+  
+  to{
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  from{
+    transform: scale(1.6) rotateZ(40deg);
+  }
+  to{
+    transform: scale(1) rotateZ(-40deg);
+  }
+}
+
 .localisation{
   height: 8vh;
   background-color: rgba(gray, $alpha: .2);
@@ -18,12 +60,13 @@
   flex-direction: column;
   align-items: center;
   h1{
-    font-size: 1.4em;
+    font-size: 1.6em;
     width: 80%;
     text-align: center;
     margin: 0;
   }
   p{
+    font-size: 1.1em;
     width: 90%;
     text-align: center;
     margin: 10px 0;
@@ -33,9 +76,10 @@
 
 .homepage__fonctionnement{
   margin-top: 30px;
+  padding-bottom: 10px;
   h3{
     margin-left: 20px;
-    font-size: 1.2em;
+    font-size: 1.4em;
   }
   .cards{
     display: flex;

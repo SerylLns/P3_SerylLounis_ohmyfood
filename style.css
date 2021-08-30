@@ -58,6 +58,48 @@ footer p {
   margin: 10px 0px 0px 0px;
 }
 
+#loading {
+  position: fixed;
+  z-index: 30;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: gray;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#loading h3 {
+  font-size: 3em;
+  color: white;
+  animation: loading infinite;
+  opacity: 1;
+  text-shadow: 15px 20px 1px black;
+}
+
+#spinner {
+  font-size: 5em;
+  color: purple;
+  animation: spinner 1s alternate infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loading {
+  from {
+    transform: scale(1.6) rotateZ(40deg);
+  }
+  to {
+    transform: scale(1) rotateZ(-40deg);
+  }
+}
 .localisation {
   height: 8vh;
   background-color: rgba(128, 128, 128, 0.2);
@@ -79,12 +121,13 @@ footer p {
   align-items: center;
 }
 .explore__section_1 h1 {
-  font-size: 1.4em;
+  font-size: 1.6em;
   width: 80%;
   text-align: center;
   margin: 0;
 }
 .explore__section_1 p {
+  font-size: 1.1em;
   width: 90%;
   text-align: center;
   margin: 10px 0;
@@ -93,10 +136,11 @@ footer p {
 
 .homepage__fonctionnement {
   margin-top: 30px;
+  padding-bottom: 10px;
 }
 .homepage__fonctionnement h3 {
   margin-left: 20px;
-  font-size: 1.2em;
+  font-size: 1.4em;
 }
 .homepage__fonctionnement .cards {
   display: flex;
@@ -176,12 +220,12 @@ footer p {
 }
 
 .new_restaurant {
-  background-color: lightgreen;
+  background-color: #99e2d0;
   color: green;
   width: 80px;
   text-align: center;
   padding: 10px;
-  font-weight: 600;
+  font-weight: 500 !important;
   position: absolute;
   right: 10px;
   border-radius: 4px;
@@ -208,7 +252,7 @@ footer p {
 .card__restaurant .card__restaurant_content i {
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: 20px;
   font-size: 1.5em;
 }
 .card__restaurant .card__restaurant_content i:hover::before {
@@ -228,11 +272,13 @@ footer p {
 }
 .card__restaurant h5 {
   margin: 10px;
-  font-size: 1em;
+  font-size: 1.1em;
+  margin-bottom: 5px;
 }
 .card__restaurant p {
-  margin: 10px;
-  font-weight: 100;
+  margin: 0px 10px 10px;
+  font-weight: 400;
+  font-size: 1.1em;
 }
 
 .restaurant__dish:nth-child(1) {
@@ -260,6 +306,10 @@ footer p {
   margin-bottom: 15px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   border-radius: 16px;
+}
+.restaurant__dish:hover .dish__price {
+  right: 0px;
+  transition: all 0.6s ease-in;
 }
 .restaurant__dish:hover .restaurant__dish_menu {
   width: 80%;
@@ -318,7 +368,10 @@ footer p {
   font-size: 0.9em;
 }
 .restaurant__dish .dish__price {
+  position: absolute;
   width: 12%;
+  bottom: 0px;
+  right: -15px;
   font-size: 1em;
   font-weight: 600;
   color: rgba(0, 0, 0, 0.7);
