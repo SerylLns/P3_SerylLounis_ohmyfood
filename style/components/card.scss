@@ -64,8 +64,7 @@
       font-size: 1.5em;
       &:hover::before {
         cursor: pointer;
-        // font-weight: bold;
-        // color: violet;
+
         animation: filling-heart .6s ease-in-out;
         font-weight: bold;
         opacity: 1;
@@ -78,7 +77,7 @@
     0% {
       color: violet;
       font-weight: bold;
-      opacity: 0;
+      opacity: 0.3;
       transform: scale(0.1);
       text-shadow: 0px 0px 4px $violet;
     }
@@ -105,7 +104,9 @@
 @for $i from 1 through 4 {
   .restaurant__dish {
     &:nth-child(#{$i}) {
-      animation: enter 1s ease-in #{$i * 0.15}s;
+      // opacity: 0;
+      animation: enter #{$i * 0.5}s ease-in ;
+
     }
   }
 }
@@ -211,8 +212,8 @@
   from {
     transform: translateY(30px);
     opacity: 0;
+  } to{
+    opacity: 1;
+    transform: translateY(0px);
   }
-}
-
-@media screen and (min-width: 600px) {
 }
