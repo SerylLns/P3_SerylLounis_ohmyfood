@@ -68,8 +68,12 @@
         animation: filling-heart .6s ease-in-out;
         font-weight: bold;
         opacity: 1;
-        color: blueviolet;
-        text-shadow: 0px 0px 4px $violet;
+        background: $violet;
+        background: -webkit-linear-gradient(bottom right, $violet, $pink);
+        background: -moz-linear-gradient(bottom right, $violet, $pink);
+        background: linear-gradient(to top left, $violet, $pink);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
   }

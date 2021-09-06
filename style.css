@@ -410,8 +410,12 @@ footer p {
   animation: filling-heart 0.6s ease-in-out;
   font-weight: bold;
   opacity: 1;
-  color: blueviolet;
-  text-shadow: 0px 0px 4px #9356dc;
+  background: #9356dc;
+  background: -webkit-linear-gradient(bottom right, #9356dc, #ff79da);
+  background: -moz-linear-gradient(bottom right, #9356dc, #ff79da);
+  background: linear-gradient(to top left, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @keyframes filling-heart {
   0% {
@@ -594,8 +598,12 @@ header i {
   animation: filling-heart 0.6s ease-in-out;
   font-weight: bold;
   opacity: 1;
-  color: blueviolet;
-  text-shadow: 0px 0px 4px #9356dc;
+  background: #9356dc;
+  background: -webkit-linear-gradient(bottom right, #9356dc, #ff79da);
+  background: -moz-linear-gradient(bottom right, #9356dc, #ff79da);
+  background: linear-gradient(to top left, #9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .restaurant__menu .restaurant__title h2 {
   font-size: 1.3em;
